@@ -1,4 +1,0 @@
-<template>
-    <h1>git
-    </h1>
-</template>
