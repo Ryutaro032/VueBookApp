@@ -50,7 +50,7 @@
                 </div>
                 <div class="td">
                     <a id="tech" href="https://books.rakuten.co.jp/book/science/?l-id=parts-genrenavi-book-science">
-                    <p>科学・テクノロジー</p>
+                    <p>技術・科学</p>
                     <img src="../assets/tech.jpg" alt="">
                     </a>
                 </div>
@@ -102,10 +102,11 @@ export default {
     width: 80%;
     margin: 0 auto;
     margin-top: 170px;
-    padding-bottom: 100px;
+    padding-bottom: 80px;
 }
 img{
     width: 100%;
+    border-radius: 30% 70% 30%;
 }
 .table{
     width: 100%;
@@ -136,13 +137,13 @@ h1{
     left: 0;
     right:0;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 30%;
   color: #fff;
   text-shadow:
-              2px 0 0 black,
-              0 2px 0  black,
-              -2px 0 0 black,
-              0 -2px 0 black
+              1.5px 0 0 black,
+              0 1.5px 0  black,
+              -1.5px 0 0 black,
+              0 -1.5px 0 black
               ;
 }
 .td:hover{
@@ -150,29 +151,20 @@ h1{
 }
 @media(max-width:599px){
     .category-table{
-        width: 85%;
+        width: 100%;
         margin-top: 100px;
     }
     .category-table h1{
         font-size: 2rem;
     }
-    .table{
-        display: flex;
-        margin:30px 0 0 0;
-    }
     .tr{
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     .td{
-        width: 110px;
-    }
-    .td p{
-        color: #fff;
-        top: 20px;
-        left: 0;
-        right: 0;
-        font-weight: bolder;
-    }
+        width: 80%;
+    } 
     
 }
 @media(max-width:1020px){

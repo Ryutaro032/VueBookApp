@@ -2,7 +2,6 @@
    <div class="top">
        <div class="header">
         <div class="header-contents">
-             <h1>ブクサ</h1>
         </div>
         </div>
         <Results/>

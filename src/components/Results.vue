@@ -66,20 +66,20 @@
       </div>
     </div>
  
-    <pagenation
-      class="pagenation"
+    <pagination
+      class="paginationr"
       :showPages="showPages"
       :currentPage="currentPage"
       :totalCount="totalCount"
       :perPage="perPage"
       :totalPages="totalPages"
       @currentPage="getCurrentPage"
-    ></pagenation>
+    ></pagination>
   </div>
 </template>
 
 <script>
-import pagenation from "@/components/pagenation.vue";
+import pagination from "@/components/pagination.vue";
 export default {
     data() {
     return {
@@ -97,7 +97,7 @@ export default {
     };
   },
   components: {
-    pagenation,
+    pagination,
   },
   methods: {
     //currentPageがページネーションコンポーネントから送られる現在のページ
@@ -149,6 +149,7 @@ export default {
 .container{
   margin: 0 auto;
   width: 100%;
+  text-align: center;
 }
 .row{
     margin-top: 100px;
@@ -167,6 +168,10 @@ h3 {
   background-color: rgb(250, 183, 58);
   color: white;
 }
+.btn:hover{
+  opacity: 0.7;
+  color: white;
+}
 .item-title{
   color: white;
   text-shadow: 1px 0 0 black,
@@ -174,6 +179,7 @@ h3 {
               -2px 0 0   rgb(250, 183, 58),
               0 -2px 0   rgb(250, 183, 58);
 }
+
 @media(max-width: 599px){
   .row{
     width: 500px;
@@ -186,9 +192,6 @@ h3 {
   .item-text{
     margin-top: 20px;
   }
-  .pagenation{
-    margin-left: -180px;
-    width: 75%;
-  }
+  
 }
 </style>

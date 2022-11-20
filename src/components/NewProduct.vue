@@ -446,7 +446,6 @@ export default {
   height: 550px;
 }
 .slide-item {
-  //border: 2px solid rgb(250, 183, 58);
   height: 470px;
   width: 250px; 
   margin:  0 auto;
