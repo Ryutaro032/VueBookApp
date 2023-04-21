@@ -1,394 +1,313 @@
 <template>
-    <div class="new-product-wrapper">
-      <div class="new product-title">
-        <h3>注目の新着作品</h3>
-      </div>
-      <div class="new-product-contents">
-        <hooper
-    class="hooper"
-    :settings="hooperSettings"
-    @slide="slide"
-    >
-    <slide>
-      <div class="slide-item">
-      <a 
-       :href="list[0].Item.itemUrl" 
-        target="_blank" 
-        class="d-block" 
-        rel="noopener noreferrer"
-        >
-         <div class="row">
-            <div class="col-auto">
-              <img
-                :src="list[0].Item.mediumImageUrls[0].imageUrl"
-                class="img-fluid"
-                v-if="list[0].Item.mediumImageUrls[0].imageUrl"
-              />
-              <div class="col">
-              <h2 class="item-name font-weight-bold">
-                {{ list[0].Item.itemName }}
-              </h2>
-              </div>
-            </div>
-         </div>
-       </a>
-      </div>
-    </slide>
-    <slide>
-      <div class="slide-item">
-        <a 
-        :href="list[1].Item.itemUrl" 
-        target="_blank" 
-        class="d-block" 
-        rel="noopener noreferrer"
-        >
-        <div class="row">
-            <div class="col-auto">
-              <img
-                :src="list[1].Item.mediumImageUrls[0].imageUrl"
-                class="img-fluid"
-                v-if="list[1].Item.mediumImageUrls[0].imageUrl"
-              />
-              <div class="col">
-              <h2 class="item-name font-weight-bold">
-                {{ list[1].Item.itemName }}
-              </h2>
-            </div>
-            </div>
-         </div>
-        </a>
-      </div>
-    </slide>
-    <slide>
-      <div class="slide-item">
-        <a 
-       :href="list[2].Item.itemUrl" 
-        target="_blank" 
-        class="d-block" 
-        rel="noopener noreferrer"
-        >
-         <div class="row">
-            <div class="col-auto">
-              <img
-                :src="list[2].Item.mediumImageUrls[0].imageUrl"
-                class="img-fluid"
-                v-if="list[2].Item.mediumImageUrls[0].imageUrl"
-              />
-              <div class="col">
-              <h2 class="item-name font-weight-bold">
-                {{ list[2].Item.itemName }}
-              </h2>
-              </div>
-            </div>
-         </div>
-       </a>
-      </div>
-    </slide>
-    <slide>
-      <div class="slide-item">
-        <a 
-       :href="list[3].Item.itemUrl" 
-        target="_blank" 
-        class="d-block" 
-        rel="noopener noreferrer"
-        >
-         <div class="row">
-            <div class="col-auto">
-              <img
-                :src="list[3].Item.mediumImageUrls[0].imageUrl"
-                class="img-fluid"
-                v-if="list[3].Item.mediumImageUrls[0].imageUrl"
-              />
-              <div class="col">
-              <h2 class="item-name font-weight-bold">
-                {{ list[3].Item.itemName }}
-              </h2>
-              </div>
-            </div>
-         </div>
-       </a>
-      </div>
-    </slide>
-    <slide>
-      <div class="slide-item">
-        <a 
-       :href="list[4].Item.itemUrl" 
-        target="_blank" 
-        class="d-block" 
-        rel="noopener noreferrer"
-        >
-         <div class="row">
-            <div class="col-auto">
-              <img
-                :src="list[4].Item.mediumImageUrls[0].imageUrl"
-                class="img-fluid"
-                v-if="list[4].Item.mediumImageUrls[0].imageUrl"
-              />
-              <div class="col">
-              <h2 class="item-name font-weight-bold">
-                {{ list[4].Item.itemName }}
-              </h2>
-              </div>
-            </div>
-         </div>
-       </a>
-      </div>
-    </slide>
-    <slide>
-      <div class="slide-item">
-        <a 
-       :href="list[5].Item.itemUrl" 
-        target="_blank" 
-        class="d-block" 
-        rel="noopener noreferrer"
-        >
-         <div class="row">
-            <div class="col-auto">
-              <img
-                :src="list[5].Item.mediumImageUrls[0].imageUrl"
-                class="img-fluid"
-                v-if="list[5].Item.mediumImageUrls[0].imageUrl"
-              />
-              <div class="col">
-              <h2 class="item-name font-weight-bold">
-                {{ list[5].Item.itemName }}
-              </h2>
-              </div>
-            </div>
-         </div>
-       </a>
-      </div>
-    </slide>
-    <slide>
-      <div class="slide-item">
-        <a 
-       :href="list[6].Item.itemUrl" 
-        target="_blank" 
-        class="d-block" 
-        rel="noopener noreferrer"
-        >
-         <div class="row">
-            <div class="col-auto">
-              <img
-                :src="list[6].Item.mediumImageUrls[0].imageUrl"
-                class="img-fluid"
-                v-if="list[6].Item.mediumImageUrls[0].imageUrl"
-              />
-              <div class="col">
-              <h2 class="item-name font-weight-bold">
-                {{ list[6].Item.itemName }}
-              </h2>
-              </div>
-            </div>
-         </div>
-       </a>
-      </div>
-    </slide>
-    <slide>
-      <div class="slide-item">
-        <a 
-       :href="list[7].Item.itemUrl" 
-        target="_blank" 
-        class="d-block" 
-        rel="noopener noreferrer"
-        >
-         <div class="row">
-            <div class="col-auto">
-              <img
-                :src="list[7].Item.mediumImageUrls[0].imageUrl"
-                class="img-fluid"
-                v-if="list[7].Item.mediumImageUrls[0].imageUrl"
-              />
-              <div class="col">
-              <h2 class="item-name font-weight-bold">
-                {{ list[7].Item.itemName }}
-              </h2>
-              </div>
-            </div>
-         </div>
-       </a>
-      </div>
-    </slide>
-    <slide>
-      <div class="slide-item">
-        <a 
-       :href="list[8].Item.itemUrl" 
-        target="_blank" 
-        class="d-block" 
-        rel="noopener noreferrer"
-        >
-         <div class="row">
-            <div class="col-auto">
-              <img
-                :src="list[8].Item.mediumImageUrls[0].imageUrl"
-                class="img-fluid"
-                v-if="list[8].Item.mediumImageUrls[0].imageUrl"
-              />
-              <div class="col">
-              <h2 class="item-name font-weight-bold">
-                {{ list[8].Item.itemName }}
-              </h2>
-              </div>
-            </div>
-         </div>
-       </a>
-      </div>
-    </slide>
-    <slide>
-      <div class="slide-item">
-        <a 
-       :href="list[9].Item.itemUrl" 
-        target="_blank" 
-        class="d-block" 
-        rel="noopener noreferrer"
-        >
-         <div class="row">
-            <div class="col-auto">
-              <img
-                :src="list[9].Item.mediumImageUrls[0].imageUrl"
-                class="img-fluid"
-                v-if="list[9].Item.mediumImageUrls[0].imageUrl"
-              />
-              <div class="col">
-              <h2 class="item-name font-weight-bold">
-                {{ list[9].Item.itemName }}
-              </h2>
-              </div>
-            </div>
-         </div>
-       </a>
-      </div>
-    </slide>
-    <slide>
-      <div class="slide-item">
-        <a 
-       :href="list[10].Item.itemUrl" 
-        target="_blank" 
-        class="d-block" 
-        rel="noopener noreferrer"
-        >
-         <div class="row">
-            <div class="col-auto">
-              <img
-                :src="list[10].Item.mediumImageUrls[0].imageUrl"
-                class="img-fluid"
-                v-if="list[10].Item.mediumImageUrls[0].imageUrl"
-              />
-              <div class="col">
-              <h2 class="item-name font-weight-bold">
-                {{ list[10].Item.itemName }}
-              </h2>
-              </div>
-            </div>
-         </div>
-       </a>
-      </div>
-    </slide>
-    <slide>
-      <div class="slide-item">
-        <a 
-       :href="list[11].Item.itemUrl" 
-        target="_blank" 
-        class="d-block" 
-        rel="noopener noreferrer"
-        >
-         <div class="row">
-            <div class="col-auto">
-              <img
-                :src="list[11].Item.mediumImageUrls[0].imageUrl"
-                class="img-fluid"
-                v-if="list[11].Item.mediumImageUrls[0].imageUrl"
-              />
-              <div class="col">
-              <h2 class="item-name font-weight-bold">
-                {{ list[11].Item.itemName }}
-              </h2>
-              </div>
-            </div>
-         </div>
-       </a>
-      </div>
-    </slide>
-    <slide>
-      <div class="slide-item">
-        <a 
-       :href="list[12].Item.itemUrl" 
-        target="_blank" 
-        class="d-block" 
-        rel="noopener noreferrer"
-        >
-         <div class="row">
-            <div class="col-auto">
-              <img
-                :src="list[12].Item.mediumImageUrls[0].imageUrl"
-                class="img-fluid"
-                v-if="list[12].Item.mediumImageUrls[0].imageUrl"
-              />
-              <div class="col">
-              <h2 class="item-name font-weight-bold">
-                {{ list[12].Item.itemName }}
-              </h2>
-              </div>
-            </div>
-         </div>
-       </a>
-      </div>
-    </slide>
-    <slide>
-      <div class="slide-item">
-        <a 
-       :href="list[13].Item.itemUrl" 
-        target="_blank" 
-        class="d-block" 
-        rel="noopener noreferrer"
-        >
-         <div class="row">
-            <div class="col-auto">
-              <img
-                :src="list[13].Item.mediumImageUrls[0].imageUrl"
-                class="img-fluid"
-                v-if="list[13].Item.mediumImageUrls[0].imageUrl"
-              />
-              <div class="col">
-              <h2 class="item-name font-weight-bold">
-                {{ list[13].Item.itemName }}
-              </h2>
-              </div>
-            </div>
-         </div>
-       </a>
-      </div>
-    </slide>
-    <slide>
-      <div class="slide-item">
-        <a 
-       :href="list[14].Item.itemUrl" 
-        target="_blank" 
-        class="d-block" 
-        rel="noopener noreferrer"
-        >
-         <div class="row">
-            <div class="col-auto">
-              <img
-                :src="list[14].Item.mediumImageUrls[0].imageUrl"
-                class="img-fluid"
-                v-if="list[14].Item.mediumImageUrls[0].imageUrl"
-              />
-              <div class="col">
-              <h2 class="item-name font-weight-bold">
-                {{ list[14].Item.itemName }}
-              </h2>
-              </div>
-            </div>
-         </div>
-       </a>
-      </div>
-    </slide>
-     <hooper-navigation slot="hooper-addons"/>
-      </hooper>
-      </div> 
+  <div class="new-product-wrapper">
+    <div class="new product-title">
+      <h3>注目の新着作品</h3>
     </div>
-</template>
+    <div class="new-product-contents">
+      <hooper class="hooper" :settings="hooperSettings" @slide="slide">
+      <slide>
+        <div class="slide-item">
+          <a :href="list[0].Item.itemUrl" target="_blank" class="d-block" rel="noopener noreferrer">
+            <div class="row">
+              <div class="col-auto">
+                <img
+                  :src="list[0].Item.mediumImageUrls[0].imageUrl"
+                  class="img-fluid"
+                  v-if="list[0].Item.mediumImageUrls[0].imageUrl"
+                />
+                <div class="col">
+                  <h2 class="item-name font-weight-bold">
+                    {{ list[0].Item.itemName }}
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </slide>
+      <slide>
+        <div class="slide-item">
+          <a :href="list[1].Item.itemUrl" target="_blank" class="d-block" rel="noopener noreferrer">
+            <div class="row">
+              <div class="col-auto">
+                <img
+                  :src="list[1].Item.mediumImageUrls[0].imageUrl"
+                  class="img-fluid"
+                  v-if="list[1].Item.mediumImageUrls[0].imageUrl"
+                />
+                <div class="col">
+                  <h2 class="item-name font-weight-bold">
+                    {{ list[1].Item.itemName }}
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </slide>
+      <slide>
+        <div class="slide-item">
+          <a :href="list[2].Item.itemUrl" target="_blank" class="d-block" rel="noopener noreferrer">
+            <div class="row">
+              <div class="col-auto">
+                <img
+                  :src="list[2].Item.mediumImageUrls[0].imageUrl"
+                  class="img-fluid"
+                  v-if="list[2].Item.mediumImageUrls[0].imageUrl"
+                />
+                <div class="col">
+                  <h2 class="item-name font-weight-bold">
+                    {{ list[2].Item.itemName }}
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </slide>
+      <slide>
+        <div class="slide-item">
+          <a :href="list[3].Item.itemUrl" target="_blank" class="d-block" rel="noopener noreferrer">
+            <div class="row">
+              <div class="col-auto">
+                <img
+                  :src="list[3].Item.mediumImageUrls[0].imageUrl"
+                  class="img-fluid"
+                  v-if="list[3].Item.mediumImageUrls[0].imageUrl"
+                />
+                <div class="col">
+                  <h2 class="item-name font-weight-bold">
+                    {{ list[3].Item.itemName }}
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </slide>
+      <slide>
+        <div class="slide-item">
+          <a :href="list[4].Item.itemUrl" target="_blank" class="d-block" rel="noopener noreferrer">
+            <div class="row">
+              <div class="col-auto">
+                <img
+                  :src="list[4].Item.mediumImageUrls[0].imageUrl"
+                  class="img-fluid"
+                  v-if="list[4].Item.mediumImageUrls[0].imageUrl"
+                />
+                <div class="col">
+                  <h2 class="item-name font-weight-bold">
+                    {{ list[4].Item.itemName }}
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </slide>
+      <slide>
+        <div class="slide-item">
+          <a :href="list[5].Item.itemUrl" target="_blank" class="d-block" rel="noopener noreferrer">
+            <div class="row">
+              <div class="col-auto">
+                <img
+                  :src="list[5].Item.mediumImageUrls[0].imageUrl"
+                  class="img-fluid"
+                  v-if="list[5].Item.mediumImageUrls[0].imageUrl"
+                />
+                <div class="col">
+                  <h2 class="item-name font-weight-bold">
+                    {{ list[5].Item.itemName }}
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </slide>
+      <slide>
+        <div class="slide-item">
+          <a :href="list[6].Item.itemUrl" target="_blank" class="d-block" rel="noopener noreferrer">
+            <div class="row">
+              <div class="col-auto">
+                <img
+                  :src="list[6].Item.mediumImageUrls[0].imageUrl"
+                  class="img-fluid"
+                  v-if="list[6].Item.mediumImageUrls[0].imageUrl"
+                />
+                <div class="col">
+                  <h2 class="item-name font-weight-bold">
+                    {{ list[6].Item.itemName }}
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </slide>
+      <slide>
+        <div class="slide-item">
+          <a :href="list[7].Item.itemUrl" target="_blank" class="d-block" rel="noopener noreferrer">
+            <div class="row">
+              <div class="col-auto">
+                <img
+                  :src="list[7].Item.mediumImageUrls[0].imageUrl"
+                  class="img-fluid"
+                  v-if="list[7].Item.mediumImageUrls[0].imageUrl"
+                />
+                <div class="col">
+                  <h2 class="item-name font-weight-bold">
+                    {{ list[7].Item.itemName }}
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </slide>
+      <slide>
+        <div class="slide-item">
+          <a :href="list[8].Item.itemUrl" target="_blank" class="d-block" rel="noopener noreferrer">
+            <div class="row">
+              <div class="col-auto">
+                <img
+                  :src="list[8].Item.mediumImageUrls[0].imageUrl"
+                  class="img-fluid"
+                  v-if="list[8].Item.mediumImageUrls[0].imageUrl"
+                />
+                <div class="col">
+                  <h2 class="item-name font-weight-bold">
+                    {{ list[8].Item.itemName }}
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </slide>
+      <slide>
+        <div class="slide-item">
+          <a :href="list[9].Item.itemUrl" target="_blank" class="d-block" rel="noopener noreferrer">
+            <div class="row">
+              <div class="col-auto">
+                <img
+                  :src="list[9].Item.mediumImageUrls[0].imageUrl"
+                  class="img-fluid"
+                  v-if="list[9].Item.mediumImageUrls[0].imageUrl"
+                />
+                <div class="col">
+                  <h2 class="item-name font-weight-bold">
+                    {{ list[9].Item.itemName }}
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </slide>
+      <slide>
+        <div class="slide-item">
+          <a :href="list[10].Item.itemUrl" target="_blank" class="d-block" rel="noopener noreferrer">
+            <div class="row">
+              <div class="col-auto">
+                <img
+                  :src="list[10].Item.mediumImageUrls[0].imageUrl"
+                  class="img-fluid"
+                  v-if="list[10].Item.mediumImageUrls[0].imageUrl"
+                />
+                <div class="col">
+                  <h2 class="item-name font-weight-bold">
+                    {{ list[10].Item.itemName }}
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </slide>
+      <slide>
+        <div class="slide-item">
+          <a :href="list[11].Item.itemUrl" target="_blank" class="d-block" rel="noopener noreferrer">
+            <div class="row">
+              <div class="col-auto">
+                <img
+                  :src="list[11].Item.mediumImageUrls[0].imageUrl"
+                  class="img-fluid"
+                  v-if="list[11].Item.mediumImageUrls[0].imageUrl"
+                />
+                <div class="col">
+                  <h2 class="item-name font-weight-bold">
+                    {{ list[11].Item.itemName }}
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </slide>
+      <slide>
+        <div class="slide-item">
+          <a :href="list[12].Item.itemUrl" target="_blank" class="d-block" rel="noopener noreferrer">
+            <div class="row">
+              <div class="col-auto">
+                <img
+                  :src="list[12].Item.mediumImageUrls[0].imageUrl"
+                  class="img-fluid"
+                  v-if="list[12].Item.mediumImageUrls[0].imageUrl"
+                />
+                <div class="col">
+                  <h2 class="item-name font-weight-bold">
+                    {{ list[12].Item.itemName }}
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </slide>
+      <slide>
+        <div class="slide-item">
+          <a :href="list[13].Item.itemUrl" target="_blank" class="d-block" rel="noopener noreferrer">
+            <div class="row">
+              <div class="col-auto">
+                <img
+                  :src="list[13].Item.mediumImageUrls[0].imageUrl"
+                  class="img-fluid"
+                  v-if="list[13].Item.mediumImageUrls[0].imageUrl"
+                />
+                <div class="col">
+                  <h2 class="item-name font-weight-bold">
+                    {{ list[13].Item.itemName }}
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </slide>
+      <slide>
+        <div class="slide-item">
+          <a :href="list[14].Item.itemUrl" target="_blank" class="d-block" rel="noopener noreferrer">
+            <div class="row">
+              <div class="col-auto">
+                <img
+                  :src="list[14].Item.mediumImageUrls[0].imageUrl"
+                  class="img-fluid"
+                  v-if="list[14].Item.mediumImageUrls[0].imageUrl"
+                />
+                <div class="col">
+                  <h2 class="item-name font-weight-bold">
+                    {{ list[14].Item.itemName }}
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </slide>
+     <hooper-navigation slot="hooper-addons"/></hooper>
+    </div> 
+  </div></template>
 
 <script>
 import {Hooper, Slide, Navigation as HooperNavigation} from 'hooper';

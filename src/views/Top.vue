@@ -1,8 +1,7 @@
 <template>
-   <div class="top">
-       <div class="header">
-        <div class="header-contents">
-        </div>
+    <div class="top">
+        <div class="header">
+            <div class="header-contents"></div>
         </div>
         <Results/>
         <div class="footer">

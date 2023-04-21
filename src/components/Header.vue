@@ -4,19 +4,16 @@
         <div class="header-left">
           <h1 class="header-logo">Bookarch</h1>
         </div>
-       <div id="nav">
-        <router-link  class="link" to="/">トップ</router-link> 
-        <router-link class="link" to="/TopPickup">ピックアップ</router-link>
-        <router-link class="link" to="/Category">カテゴリー別検索</router-link>
-       </div>
-       <div 
-       class="nav-toggle"
-       v-on:click="activeBtn=!activeBtn"
-       >
+        <div id="nav">
+          <router-link  class="link" to="/">トップ</router-link> 
+          <router-link class="link" to="/TopPickup">ピックアップ</router-link>
+          <router-link class="link" to="/Category">カテゴリー別検索</router-link>
+        </div>
+        <div class="nav-toggle" v-on:click="activeBtn=!activeBtn">
           <span class="line line01" :class="{'btnLine1':activeBtn}"></span>
           <span class="line line02" :class="{'btnLine2':activeBtn}"></span>
           <span class="line line03" :class="{'btnLine3':activeBtn}"></span>
-       </div>
+        </div>
       </div>
       <transition class="nav-wrapper">
         <div class="menu" v-show="activeBtn">
@@ -30,7 +27,7 @@
             <li>
               <router-link class="res-link category" to="/Category">カテゴリー別検索</router-link>
             </li>
-        </ul>
+          </ul>
         </div>
       </transition>
     </div>
@@ -50,7 +47,7 @@ export default {
 .header{
   width: 100%;
   height: 70px;
-  background-color: rgb(250, 183, 58,0.9);
+  background-color: rgba(255, 156, 7, 0.7);
   position: fixed;
   top: 0px;
   left: 0px;

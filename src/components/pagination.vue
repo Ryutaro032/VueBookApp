@@ -1,79 +1,55 @@
 <template>
-    <div 
-    class="row py-3 justtify-content-center" 
-    v-if="totalPages"
-    >
+    <div class="row py-3 justtify-content-center" v-if="totalPages">
         <div class="col-auto">
             <nav aria-label="Page navigation">
                 <ul class="pagination">
-                    <li 
-                    class="page-item" 
-                    :class="{'disabled':currentPageEdited == 1}"
-                    >
+                    <li class="page-item" :class="{'disabled':currentPageEdited == 1}">
                         <a  
-                        class="page-link" 
-                        href="#" 
-                        v-on:click.prevent="setPage(1)"
+                            class="page-link" 
+                            href="#" 
+                            v-on:click.prevent="setPage(1)"
                         >
-                        ≪
+                            ≪
+                        </a>
+                    </li>
+                    <li class="page-item" :class="{'disabled':currentPageEdited == 1}">
+                        <a  
+                            class="page-link" 
+                            href="#" 
+                            v-on:click.prevent="setPage(currentPageEdited -1)"
+                            :class="{'disable':currentPageEdited == 1}"
+                        >
+                            ≺
                         </a>
                     </li>
                     <li 
-                    class="page-item" 
-                    :class="{'disabled':currentPageEdited == 1}"
+                        class="page-item"
+                        v-for="num in showPageFix"
+                        :key="num"
+                        :class="{'active': numFix(num) == currentPageEdited}"
                     >
-                        <a  
-                        class="page-link" 
-                        href="#" 
-                        v-on:click.prevent="setPage(currentPageEdited -1)"
-                        :class="{'disable':currentPageEdited == 1}"
+                        <template v-if="numFix(num) == currentPageEdited">
+                            <span class="page-link">
+                                {{numFix(num)}}
+                            </span>
+                        </template>
+                        <a
+                            class="page-link" 
+                            href="#"
+                            v-on:click.prevent="setPage(numFix(num))"
+                            v-else
                         >
-                        ≺
+                            {{numFix(num)}}
                         </a>
                     </li>
-                    <li 
-                    class="page-item"
-                    v-for="num in showPageFix"
-                    :key="num"
-                    :class="{'active': numFix(num) == currentPageEdited}"
-                    >
-                    <template v-if="numFix(num) == currentPageEdited">
-                        <span 
-                        class="page-link"
-                        >
-                        {{numFix(num)}}
-                        </span>
-                    </template>
-                    <a
-                    class="page-link" 
-                    href="#"
-                    v-on:click.prevent="setPage(numFix(num))"
-                    v-else
-                    >{{numFix(num)}}
-                    </a>
-                    </li>
-                    <li 
-                    class="page-item" 
-                    :class="{'disabled': currentPageEdited == totalPages}"
-                    >
-                       <a 
-                       class="page-link" 
-                       href="#" 
-                       v-on:click.prevent="setPage(currentPageEdited + 1);"
-                       >
-                       >
+                    <li class="page-item" :class="{'disabled': currentPageEdited == totalPages}">
+                       <a class="page-link" href="#" v-on:click.prevent="setPage(currentPageEdited + 1);">
+                            >
                        </a>
                     </li>
-                    <li 
-                    class="page-item" 
-                    :class="{'disabled': currentPageEdited == totalPages}"
-                    >
-                       <a 
-                       class="page-link" 
-                       href="#" 
-                       v-on:click.prevent="setPage(totalPages);"
-                       >
-                       ≫
+                    <li class="page-item" :class="{'disabled': currentPageEdited == totalPages}">
+                       <a class="page-link" href="#" v-on:click.prevent="setPage(totalPages);">
+                            ≫
                        </a>
                     </li>
                 </ul>
@@ -109,7 +85,7 @@ export default {
             var vm=this;
             return function(num){
                 var ajust=1 +(vm.showPages - 1) / 2;
-                 var result=num;
+                var result=num;
                 //前ページがマイナスになる場合は1からはじめる
                 if(vm.currentPageEdited > vm.showPages / 2){
                      result=num + vm.currentPageEdited - ajust;
